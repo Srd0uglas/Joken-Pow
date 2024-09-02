@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+/* ocupar 100% da tela */
+    height: 100vh;
+    width: 100vw;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f7fb;
+}
+.caixona{
+    /* cor da caixa */
+    background-color: #fff;
+    /* espaçamento das caixas para as fotos */
+    padding: 2rem 5rem;
+    /* arredodamento de bordas */
+    border-radius: 15px;
+    /* sombras */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* itens um embaixo do outro */
+    flex-direction: column;
+}
+.resultado div{
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+    img{
+        width: 100px;
+    }
+}
+.result-user{
+    /* colocar as imagens das mãos uma de frente para a outra  */
+    transform: rotate(90deg);
+}
+.result-pc{
+    /* rotateY é para ajustar a direção (os dois polegares estão para direita) */
+    transform: rotate(-90deg) rotateY(180deg);
+}
+.options-imagens{
+    img{
+        width: 50px;
+    }
+}
