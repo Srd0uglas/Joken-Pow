@@ -35,16 +35,73 @@ body{
         width: 100px;
     }
 }
-.result-user{
+.opções{
+    p{
+        color: #7d2ae8;
+        font-size: 1.4rem;
+        font-weight: bold;
+       text-align: center;
+    }
+}
+.result-user img{
     /* colocar as imagens das mãos uma de frente para a outra  */
     transform: rotate(90deg);
 }
-.result-pc{
+.result-pc img{
     /* rotateY é para ajustar a direção (os dois polegares estão para direita) */
     transform: rotate(-90deg) rotateY(180deg);
 }
 .options-imagens{
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: opacity 0.5 ease;
+    /* ficar meio transparente */
+    opacity: 0.5;
     img{
         width: 50px;
+    }
+}
+
+/* se eu passar o mouse na imagm ela continua com cor  */
+.options-imagens:hover{
+    opacity: 1;
+}
+/* enquanto o mouse estiver na minha imagem ela está com cor */
+.options-imagens:active{
+    opacity: 1;
+}
+
+.text-result{
+    text-align: center;
+    color: #7d2ae8;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+/* animação da mãos */
+.caixona .result-user{
+    transform-origin: left;
+    /* nome do keyframe>duração>suavização>animação infinita */
+    animation: maozinha 0.7s ease infinite;
+}
+
+@keyframes maozinha{
+    /* criação do movimento */
+    50%{
+        transform:rotate(10deg);
+    }
+}
+.caixona .result-pc{
+    transform-origin: right;
+    /* nome do keyframe>duração>suavização>animação infinita */
+    animation: maozinha-pc 0.7s ease infinite;
+}
+
+@keyframes maozinha-pc{
+    /* criação do movimento */
+    50%{
+        transform:rotate(-10deg);
     }
 }
